@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 32px;
+	background:75% 10%url(./images/pattern-bg.svg);
+	background-repeat: no-repeat;
+	margin-top: -70px;
+}
+.containers {
+	display: grid;
+	margin-top: 2%;
+	margin-right: 10% ;
+}
+/******CONTAINER1*******/
+.container1 {
+	display: grid;
+	grid-template-areas: "quote picture";
+	grid-template-columns: 43% 1fr;
+	grid-gap: 20px;
+	padding-top: 100px;
+}
+.quote {
+	z-index: 1;
+	position: relative;
+	display: grid;
+	grid-area: quote;
+	margin-left: 31.5%;
+	font-size: 20px;
+	margin-right: -10%;
+	justify-content: end;
+	align-content: center;
+	background: 22% 21% url(./images/pattern-quotes.svg);
+	background-repeat: no-repeat;
+}
+.container1 p {
+	line-height: 1.5;
+}
+.name {
+	padding-top: 30px;
+	font-weight: 700;
+	color: hsl(240, 38%, 20%);
+}
+.name span {
+	padding-left: 10px;
+	font-size: 18px;
+	color: hsl(240, 18%, 77%);
+}
+.quote-john {
+	display: none;
+}
+.img-john {
+	display: none;
+}
+.pattern-bg {
+		background: 85% 9%;
+		background-repeat: no-repeat;;
+	}
+.photo {
+	display: grid;
+	grid-area: picture;
+	position: relative;
+	justify-content: start;
+}
+.img {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+	width: 550px;
+	height: 540px;
+	margin-top: 20px;
+}
+
+
+/***** Button*****/
+.toggle {
+	grid-area: picture;
+	display: grid;
+	align-content: end;
+	position: relative;
+	margin-left: 10%;
+	margin-bottom: -2.5%;
+}
+button {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	border:1px solid #fff;
+}
+.switch {
+ 	width: 68px;
+  height: 34px;
+  border-radius: 30px;
+  background-color: #fff;
+  border-color: #fff;
+}
+.img-left{
+	padding-right: 10px;
+	height: 12px;
+	padding-top: 3px;
+}
+.img-right {
+	padding-left: 10px;
+	height: 12px;
+}
+
+/******ATTRIBUTION******/
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+	padding-top: 10px;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width:  600px) {
+	body {
+		width: 375px;
+		text-align: center;
+		margin-top: 0;
+	}
+	.containers {
+		margin-left: 10%;
+	}
+	.container1 {
+		grid-template-areas: 
+		"picture"
+		"quote";
+		grid-template-columns: 1fr 1fr;
+	}
+	.quote {
+		margin-right:0;
+		margin-left: 0;
+		padding-top: 150px;
+		background: 50% 21% url(./images/pattern-quotes.svg);
+		background-repeat: no-repeat;
+		width: 375px;
+	}
+	.img {
+		width: 375px;
+		overflow: hidden;
+		display: grid;
+		grid-area: picture;
+		justify-content: center;
+		margin-left: 5%;
+	}
+	.toggle {
+		margin-left: 40%;
+		margin-bottom: -5%;
+	}
+	.container1 span {
+		display: block;
+	}
+}
